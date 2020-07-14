@@ -1,0 +1,184 @@
+$font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  font-family: $font-stack;
+
+  #logo {
+    width: 10rem;
+  }
+  .container {
+    img {
+      width: 20rem;
+    }
+  }
+}
+
+//============ HEADER ============
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.main-header {
+  background-color: $black;
+  color: $white;
+  letter-spacing: 1px;
+
+  &--wrapper {
+    border: 5px solid $orange;
+    padding: 20px 0 0;
+    text-align: center;
+    transition: padding-top .2s ease-in-out;
+
+    .collapsed & {
+      padding-top: 0;
+    }
+  }
+
+  .container {
+    padding: 5px;
+  }
+
+  &__title {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__logo {
+    font-family: Alentine, sans-serif;
+    font-size: 60px;
+    transition: font-size .2s ease-in-out;
+
+    .collapsed & {
+      font-size: 40px;
+    }
+  }
+
+  &__sub-title {
+    font-family: Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: .3px;
+  }
+
+  &__menu {
+    font-family: Rounds, sans-serif;
+    font-size: 60px;
+    letter-spacing: .5px;
+    margin-top: 10px;
+    line-height: 70px;
+  }
+
+}
+
+//============ SUB HEADER ============
+
+.sub-header {
+  background-color: $white;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: $black;
+        padding: 6px;
+        background-color: $gray;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: Helvetica, sans-serif;
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+//============ CONTENT ============
+
+main {
+  color: black;
+  background: $orange;
+  padding: 1px 0 50px;
+  margin-top: 308px;
+  transition: margin-top .2s ease-in-out;
+
+  .collapsed & {
+    margin-top: 200px;
+  }
+}
+
+.title-img {
+  text-align: center;
+  padding: 40px 0 10px;
+
+  img {
+    max-width: 90%;
+  }
+}
+
+h2 {
+  display: block;
+  font-family: Mojito, sans-serif;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 40px;
+}
+
+.menu-item {
+  background-color: $white;
+  padding: 20px 50px 0;
+  margin-bottom: -1px;
+
+  &:first-child {
+    padding-top: 50px;
+  }
+  &:last-child {
+    padding-bottom: 50px;
+  }
+
+  &:not(:last-child):after {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: #000;
+    margin: 30px auto 0;
+    width: 40%;
+  }
+
+  h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 2px;
+    letter-spacing: 1;
+  }
+
+  mark {
+    background-color: transparent;
+    color: $orange;
+
+  }
+
+  p {
+    font-size: 16px;
+    font-family: Palatino, sans-serif;
+    line-height: 16px;
+  }
+}
