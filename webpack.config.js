@@ -72,7 +72,7 @@ const config = {
                   ],
                 }),
                 autoprefixer({
-                  Browserslist:['ie >= 8', 'last 4 version']
+                  browsers:['ie >= 8', 'last 4 version']
                 })
               ],
             },
