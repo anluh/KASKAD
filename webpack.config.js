@@ -99,6 +99,10 @@ const config = {
           to: "./fonts",
         },
         {
+          from: "./src/html/views/",
+          to: "./html",
+        },
+        {
           from: "./src/favicon",
           to: "./favicon",
         },
